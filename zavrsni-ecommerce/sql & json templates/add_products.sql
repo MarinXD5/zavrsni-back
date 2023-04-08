@@ -1,5 +1,5 @@
 -- -----------------------------------------------------
--- Schema full-stack-ecommerce
+-- Schema zavrsnidb
 -- -----------------------------------------------------
 DROP SCHEMA IF EXISTS `zavrsnidb`;
 
@@ -22,11 +22,8 @@ AUTO_INCREMENT = 1;
 CREATE TABLE IF NOT EXISTS `zavrsnidb`.`product` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
   `sku` VARCHAR(255) DEFAULT NULL,
-<<<<<<< HEAD
   `name` longtext DEFAULT NULL,
-=======
   `name` VARCHAR(255) DEFAULT NULL,
->>>>>>> 10c0e0d8cbc9616708b138d1e7e934819795b49f
   `description` VARCHAR(255) DEFAULT NULL,
   `unit_price` DECIMAL(13,2) DEFAULT NULL,
   `image_url` VARCHAR(255) DEFAULT NULL,
@@ -44,7 +41,6 @@ AUTO_INCREMENT = 1;
 
 
 -- -----------------------------------------------------
-<<<<<<< HEAD
 -- Categories
 -- -----------------------------------------------------
 
@@ -85,51 +81,10 @@ VALUES ('LAPTOP-WORK-0003', 'Notebook Asus ExpertBook B1, B1500CEAE-BQ3072, 15.6
 
 -- -------------------------------------------------------
 -- DESKTOPS
-=======
--- Add sample data
 -- -----------------------------------------------------
 
-INSERT INTO product_category(category_name) VALUES ('BOOKS');
-INSERT INTO product_category(category_name) VALUES ('COFFEE MUGS');
-INSERT INTO product_category(category_name) VALUES ('MOUSE PADS');
-INSERT INTO product_category(category_name) VALUES ('LUGGAGE TAGS');
-
-
--- -------------------------------------------------------
--- Books
--- -------------------------------------------------------
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1000', 'JavaScript - The Fun Parts', 'Learn JavaScript',
-'assets/images/products/placeholder.png'
-,1,100,19.99,1, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1001', 'Spring Framework Tutorial', 'Learn Spring',
-'assets/images/products/placeholder.png'
-,1,100,29.99,1, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1002', 'Kubernetes - Deploying Containers', 'Learn Kubernetes',
-'assets/images/products/placeholder.png'
-,1,100,24.99,1, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1003', 'Internet of Things (IoT) - Getting Started', 'Learn IoT',
-'assets/images/products/placeholder.png'
-,1,100,29.99,1, NOW());
-
--- -------------------------------------------------------
--- Coffee Mugs
->>>>>>> 10c0e0d8cbc9616708b138d1e7e934819795b49f
--- -------------------------------------------------------
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-<<<<<<< HEAD
 VALUES ('DESKTOP-1000', 'Računalo INSTAR Gamer Iris, Intel Core i3 10105F up to 4.40GHz, 8GB DDR4, 250GB NVMe SSD, NVIDIA GeForce GTX1650 4GB, no ODD', 'DESKTOP INTEL',
 'assets/images/products/racunalo-instar-gamer-iris-intel-core-i3-10105f-up-to-440ghz-52835-10105f-iri-ssd250-1650_144900.png'
 ,1,100,585.00,2, NOW());
@@ -154,37 +109,10 @@ VALUES ('DESKTOP-1003', 'Računalo Lenovo Gaming Legion T5, 90RC01ASXT, AMD Ryze
 
 -- -------------------------------------------------------
 -- MOBILE PHONES
-=======
-VALUES ('COFFEE-MUG-1000', 'Best Programmer ever :P', 'Best Programmer ever mug',
-'assets/images/products/placeholder.png'
-,1,100,9.99,2, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('COFFEE-MUG-1001', '6 digits pay', '6 digits pay mug',
-'assets/images/products/placeholder.png'
-,1,100,9.99,2, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('COFFEE-MUG-1002', 'RedBull & Coffee <3', 'RedBull & Coffee <3 mug',
-'assets/images/products/placeholder.png'
-,1,100,9.99,2, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('COFFEE-MUG-1003', 'No-Life', 'No-Life mug',
-'assets/images/products/placeholder.png'
-,1,100,9.99,2, NOW());
-
--- -------------------------------------------------------
--- Mouse Pads
->>>>>>> 10c0e0d8cbc9616708b138d1e7e934819795b49f
 -- -------------------------------------------------------
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-<<<<<<< HEAD
 VALUES ('MOBILE-PHONE-1000', 'Mobitel Apple iPhone SE (2022), 64GB, Starlight', 'iPhone',
 'assets/images/products/mobitel-apple-iphone-se-2022-64gb-starli-ins-58693_1.png'
 ,1,10,609.00,3, NOW());
@@ -209,37 +137,10 @@ VALUES ('MOBILE-PHONE-1003', 'Mobitel Oppo A96, 6.59" 90Hz, 6GB RAM, 128GB Memor
 
 -- -------------------------------------------------------
 -- TABLETS
-=======
-VALUES ('MOUSE-PAD-1000', 'Dragon Ball Z', 'Dragon Ball Z mouse pad',
-'assets/images/products/placeholder.png'
-,1,100,14.99,3, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('MOUSE-PAD-1001', 'Avatar: The Last Airbender', 'Avatar: The Last Airbender mouse pad',
-'assets/images/products/placeholder.png'
-,1,100,14.99,3, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('MOUSE-PAD-1002', 'Purple original', 'Purple original mouse pad',
-'assets/images/products/placeholder.png'
-,1,100,14.99,3, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('MOUSE-PAD-1003', 'One piece', 'One piece mouse pad',
-'assets/images/products/placeholder.png'
-,1,100,14.99,3, NOW());
-
--- -------------------------------------------------------
--- Luggage Tags
->>>>>>> 10c0e0d8cbc9616708b138d1e7e934819795b49f
 -- -------------------------------------------------------
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-<<<<<<< HEAD
 VALUES ('TABLET-1000', 'Tablet Apple iPad Pro (2022) WiFi, 11", 128GB Memorija, Space Grey', 'iPad Pro',
 'assets/images/products/tablet-apple-ipad-pro-2022-wifi-11-128gb-memorija-space-grey-297-mnxd3_1.png'
 ,1,100,1149.00,4, NOW());
@@ -258,7 +159,7 @@ VALUES ('TABLET-1002', 'Tablet Vivax TPC-105, 10.1" 1280x800px, Quad-Core 1.3GHz
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('TABLET-1003', 'ablet Lenovo Tab M8 (3rd Gen), ZA870159GR, 8" 1280x800px IPS Touch, Octa-Core 2.3GHz, 3GB DDR4 RAM, 32GB eMMC Memorija, WiFi 5, Bluetooth 5.0, Android 11, Iron Grey', 'Lenovo',
+VALUES ('TABLET-1003', 'Tablet Lenovo Tab M8 (3rd Gen), ZA870159GR, 8" 1280x800px IPS Touch, Octa-Core 2.3GHz, 3GB DDR4 RAM, 32GB eMMC Memorija, WiFi 5, Bluetooth 5.0, Android 11, Iron Grey', 'Lenovo',
 'assets/images/products/tablet-lenovo-tab-m8-3rd-gen-za5h0016bg--len-tab-za870159gr_1.png'
 ,1,100,158.18,4, NOW());
 
@@ -317,26 +218,3 @@ unit_price, category_id, date_created)
 VALUES ('COMPONENTS-1003', 'Grafička Gainward GeForce GT710 SilentFX, 2GB DDR3', 'NVIDIA graphics card',
 'assets/images/products/gainward-gf-gt710-2gb-ddr3-silentfx-89290-gai-710-2gb3_1.png'
 ,1,100,79.71,6, NOW());
-=======
-VALUES ('LUGGAGE-TAG-1000', 'Dont mind me, Im just a cool programmer', 'Dont mind me, Im just a cool programmer luggage tag',
-'assets/images/products/placeholder.png'
-,1,100,0.99,4, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('LUGGAGE-TAG-1001', '7 am gonna wake up', '7 am gonna wake up luggage tag',
-'assets/images/products/placeholder.png'
-,1,100,0.99,4, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('LUGGAGE-TAG-1002', 'Jesus take the wheel', 'Jesus take the wheel luggage tag',
-'assets/images/products/placeholder.png'
-,1,100,0.99,4, NOW());
-
-INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
-unit_price, category_id, date_created)
-VALUES ('LUGGAGE-TAG-1003', 'Windows XP', 'luggage tag',
-'assets/images/products/placeholder.png'
-,1,100,0.99,4, NOW());
->>>>>>> 10c0e0d8cbc9616708b138d1e7e934819795b49f
