@@ -6,6 +6,7 @@ import com.marin.zavrsniecommerce.dto.PurchaseResponse;
 import com.marin.zavrsniecommerce.entity.Customer;
 import com.marin.zavrsniecommerce.entity.Order;
 import com.marin.zavrsniecommerce.entity.OrderItem;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +21,7 @@ public class CheckoutService {
     private CustomerRepository customerRepository;
 
     @Transactional
-    public PurchaseResponse placeOrder(Purchase purchase){
+    public PurchaseResponse placeOrder(@NotNull Purchase purchase){
 
         Order order = purchase.getOrder();
 
